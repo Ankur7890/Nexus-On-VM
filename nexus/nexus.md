@@ -202,12 +202,13 @@ ankur-maven-snapshot
 ankur-maven-proxy
 ankur-maven-group
 
+Here, maven group(ankur-maven-group) has mapping of proxy, snapshot and release.
+
 ```
 
-All pointing to our nexus blob store with the maven group has mapping of proxy, snapshot and release.
+All pointing to our nexus blob store `ankur-blob` writing to /data/nexus-blob.
 
-
-Please note, the default blob store association for built-in repositories such as Maven Public, Maven Releases, and Maven Snapshots could not be edited and needs separate blob-store to be created other than default.
+Please note, the default blob store association for built-in repositories such as Maven Public, Maven Releases, and Maven Snapshots could not be edited and needs separate blob-store to be created other than the default.
 
 Verify the configured blob store by uploading a small test artifact and checking that Nexus can read it back.
 
