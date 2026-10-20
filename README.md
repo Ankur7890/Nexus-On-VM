@@ -26,7 +26,7 @@ This README filters the useful installation and configuration steps from my setu
 - Blob-store mount point on Nexus: `/data/nexus-blob`
 - NFS export directory on the current active node: `/mnt/nexus-blob`
 
-The lab used three EC2 instances: one PostgreSQL VM, one active Nexus VM, and one standby Nexus VM. Instance sizing in the lab was `c7i-flex.large` (2 vCPU, 4 GiB RAM), with a 10 GiB root disk. Size storage according to actual artifact volume and operational requirements before using this design beyond a lab.
+The lab used three EC2 instances: one PostgreSQL VM, one active Nexus VM, and one standby Nexus VM. Instance sizing in the lab was `c7i-flex.large` (2 vCPU, 4 GiB RAM), with a 10 GiB root EBS disk size storage.
 
 *Note:* The VPC, security groups, and Availability Zone (AZ) configuration should be planned according to your environment and availability requirements.
 
