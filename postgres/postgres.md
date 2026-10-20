@@ -30,7 +30,7 @@ host    nexus    nexus    10.0.0.0/16    scram-sha-256
 ```
 
 **NOTE:**
-Here, 10.0.0.0/16 is nexus machine range, where nexus nexus are DB user and Database respectively. This is very broad range should be properly restricted in actual workload.
+Here, 10.0.0.0/16 is the machine range, where nexus nexus are DB user and Database respectively. This is very broad range should be properly restricted or defined in actual workload.
 This rule allows the nexus user to connect to the nexus database from the specified network using SCRAM password authentication. 
 
 Restart PostgreSQL:
