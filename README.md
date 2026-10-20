@@ -8,7 +8,7 @@ The objective is to explore whether a passive Nexus VM can be activated when the
 
 For production deployments, review Sonatype's official documentation, supported architecture, edition-specific capabilities, and licensing requirements before adopting this design.
 
-# Nexus Repository Active-Passive on RHEL AMI 9.8 (Manual Setup)
+# Nexus Repository Active-Standby on RHEL AMI 9.8 (Manual Setup)
 
 This README filters the useful installation and configuration steps from my setup notes. It removes terminal output, repeated commands, troubleshooting attempts, and sensitive values.
 
