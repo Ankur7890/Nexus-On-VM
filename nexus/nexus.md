@@ -116,7 +116,7 @@ sudo -u nexus touch /data/nexus-blob/nfs-write-test
 sudo -u nexus ls -l /data/nexus-blob/nfs-write-test
 ```
 
-**Security note:**  During lab testing, I encountered permission errors when accessing the NFS-mounted blob-store directory at /data/nexus-blob. Although the directory was owned by the nexus user on the NFS server, access through the mounted path did not behave as expected. Disabling SELinux allowed the write operation to proceed, indicating that SELinux restrictions may have contributed to the issue.
+**Security note:**  During lab testing, I encountered permission denied errors when accessing the NFS-mounted blob-store directory at /data/nexus-blob. Although the directory was owned by the nexus user on the NFS server, access through the mounted path did not behave as expected. Disabling SELinux allowed the write operation to proceed, indicating that SELinux restrictions may have contributed to the issue.
 
 I also tested the no_root_squash export option while troubleshooting NFS permissions:
 
