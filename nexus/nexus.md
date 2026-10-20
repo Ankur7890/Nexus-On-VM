@@ -211,7 +211,7 @@ Please note, the default blob store association for built-in repositories such a
 
 Verify the configured blob store by uploading a small test artifact and checking that Nexus can read it back.
 
-## . Stop nexus services on active and start on passive. Ensure NFS mount and DB is accessible.
+## 8. Stop nexus services on active and start on passive. Ensure NFS mount and DB is accessible.
 
 ```bash
 sudo systemctl start nexus
@@ -221,7 +221,7 @@ curl -I http://localhost:8081
 
 Validate that able to write to the blob store.
 
-## 8. What my lab demonstrate
+## 9. What my lab demonstrate
 
 ### Demonstrated in the setup notes
 
