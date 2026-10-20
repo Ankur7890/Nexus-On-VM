@@ -29,7 +29,7 @@ Edit `/var/lib/pgsql/data/pg_hba.conf`, replace the network with the range that 
 host    nexus    nexus    10.0.0.0/16    scram-sha-256
 ```
 
-[NOTE]
+**NOTE:**
 Here, 10.0.0.0/16 is nexus machine range, where nexus nexus are DB user and Database respectively. This is very broad range should be properly restricted in actual workload.
 This rule allows the nexus user to connect to the nexus database from the specified network using SCRAM password authentication. 
 
