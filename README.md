@@ -1,3 +1,13 @@
+# Important Disclaimer
+
+This setup demonstrates a lab-based approach to running Nexus Repository on two VMs with an external PostgreSQL database and a shared NFS blob-store directory.
+
+The systemd service configuration, shared-storage setup, and manual failover procedure are an implementation approach tested in my lab. They are not intended to represent Sonatype's official or certified high-availability architecture.
+
+The objective is to explore whether a passive Nexus VM can be activated when the active VM becomes unavailable, provided the database and blob-store dependencies remain accessible and the former active instance is confirmed to be stopped.
+
+For production deployments, review Sonatype's official documentation, supported architecture, edition-specific capabilities, and licensing requirements before adopting this design.
+
 # Nexus Repository Active-Passive on RHEL AMI 9.8 (Manual Setup)
 
 This README filters the useful installation and configuration steps from my setup notes. It removes terminal output, repeated commands, troubleshooting attempts, and sensitive values.
@@ -6,7 +16,7 @@ This README filters the useful installation and configuration steps from my setu
 
 - AWS region: `ap-south-1`
 - OS: Red Hat Enterprise Linux 9.8 AMI
-- Nexus Repository: `3.96.0-09` (Community edition)
+- Nexus Repository: `3.96.0-09
 - PostgreSQL: `18.4`
 - Database name: `nexus`
 - PostgreSQL schema: `nexus`
