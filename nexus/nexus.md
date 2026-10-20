@@ -1,4 +1,4 @@
-## 3. Download Nexus Repository tar and install on both Nexus VMs
+## 1. Download Nexus Repository tar and install on both Nexus VMs
 
 Perform these installation steps on **both** Nexus VMs. Use the same Nexus version and keep the application installation and working directories consistent.
 
@@ -55,7 +55,7 @@ sudo chown -R nexus:nexus /opt/sonatype-work/nexus3
 
 Do not put real credentials or private IP addresses in a public repository.
 
-## 4. Configure NFS on the current active Nexus VM
+## 2. Configure NFS on the current active Nexus VM
 
 In my lab: the **active Nexus VM also hosts the NFS export**.
 
@@ -89,7 +89,7 @@ sudo systemctl status nfs-server
 ```
 
 
-## 5. Mount the NFS export on both Nexus nodes
+## 3. Mount the NFS export on both Nexus nodes
 
 Create the mount point on each Nexus node:
 
@@ -143,7 +143,7 @@ findmnt /data/nexus-blob
 
 The export IP in my lab is the active Nexus VM. In a production topology with independent NAS/NFS, use the NAS/NFS endpoint instead.
 
-## 6. Create the Nexus systemd service
+## 4. Create the Nexus systemd service
 
 Create `/etc/systemd/system/nexus.service` on both Nexus VMs:
 
@@ -184,7 +184,7 @@ curl -I http://localhost:8081
 **Only one Nexus instance should actively use the same repository database and shared blob-store data at a time.** 
 Keep the Passive instance stopped until it is deliberately activated under the manual failover procedure.
 
-## 7. Configure the blob store in the Nexus UI
+## 5. Configure the blob store in the Nexus UI
 
 After Nexus starts, sign in to the UI and create a blob store say `ankur-blob` that points to the mounted path:
 
@@ -211,7 +211,7 @@ Please note, the default blob store association for built-in repositories such a
 
 Verify the configured blob store by uploading a small test artifact and checking that Nexus can read it back.
 
-## 8. Stop nexus services on active and start on passive. Ensure NFS mount and DB is accessible.
+## 6. Stop nexus services on active and start on passive. Ensure NFS mount and DB is accessible.
 
 ```bash
 sudo systemctl start nexus
@@ -221,7 +221,7 @@ curl -I http://localhost:8081
 
 Validate that able to write to the blob store.
 
-## 9. What my lab demonstrate
+## 7. What my lab demonstrate
 
 ### Demonstrated in the setup notes
 
