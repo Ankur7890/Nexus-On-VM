@@ -194,12 +194,15 @@ After Nexus starts, sign in to the UI and create a blob store say `ankur-blob` t
 
 Then configure repositories to use the intended blob store where the installed Nexus edition allows it. 
 
-Note:- We need to create new repos to use our new blob stores, so for instance if we are using maven then we can create 
+# Note:- We need to create new repos to use our new blob stores, so for instance if we are using maven then we can create 
 
+```text
 ankur-maven-release
 ankur-maven-snapshot
 ankur-maven-proxy
 ankur-maven-group
+
+```
 
 All pointing to our nexus blob store with the maven group has mapping of proxy, snapshot and release.
 
