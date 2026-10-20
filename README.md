@@ -15,8 +15,8 @@ This README filters the useful installation and configuration steps from my setu
 ## 1. Environment
 
 - AWS region: `ap-south-1`
-- OS: Red Hat Enterprise Linux 9.8 AMI
-- Nexus Repository: `3.96.0-09
+- OS: `Red Hat Enterprise Linux 9.8 AMI`
+- Nexus Repository: `3.96.0-09`
 - PostgreSQL: `18.4`
 - Database name: `nexus`
 - PostgreSQL schema: `nexus`
