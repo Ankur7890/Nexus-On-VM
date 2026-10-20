@@ -215,6 +215,12 @@ Verify the configured blob store by uploading a small test artifact and checking
 ## 6. Stop nexus services on active and start on passive. Ensure NFS mount and DB is accessible.
 
 ```bash
+
+#### On Active Node ####
+sudo systemctl stop nexus
+sudo systemctl status nexus
+
+#### On Standby Node ####
 sudo systemctl start nexus
 sudo systemctl status nexus
 curl -I http://localhost:8081
