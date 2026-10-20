@@ -20,7 +20,7 @@ Edit `/var/lib/pgsql/data/postgresql.conf` and configure PostgreSQL to listen on
 ```conf
 listen_addresses = '*'
 ```
-[NOTE]
+**NOTE:**
 This allows PostgreSQL to accept connections on available interfaces. Access must still be restricted using firewall rules, security groups, and PostgreSQL authentication.
 
 Edit `/var/lib/pgsql/data/pg_hba.conf`, replace the network with the range that contains only the intended Nexus clients:
